@@ -10,28 +10,28 @@ middleware(app, express);
 var PORT = process.env.PORT || 3000;
 
 app.listen(PORT);
-console.log('Grocery List is LISTening on ' + PORT);
+console.log('Purl is listening on ' + PORT);
 
 // Initialize Firebase
-firebase.initializeApp({
-  databaseURL: 'https://project-3889533569816587013.firebaseio.com/',
-  serviceAccount: '/Users/mario/desktop/code/GL/server/GLfirebaseKey.json'
-});
-// Initialize firebase db reference
-var db = firebase.database();
-var ref = db.ref('/');
-ref.once('value', function(snapshot) {
-  console.log(snapshot.val());
-});
-// var dbList = ref.child('grocerylist');
-//console.log('dblist', ref);
-// ref.set({list: [{item:'milk', 'date': 5}, {item:'eggs', 'date': 5}, {item:'cheese', 'date': 5}]})
+// firebase.initializeApp({
+//   databaseURL: 'https://project-3889533569816587013.firebaseio.com/',
+//   serviceAccount: '/Users/mario/desktop/code/GL/server/GLfirebaseKey.json'
+// });
+// // Initialize firebase db reference
+// var db = firebase.database();
+// var ref = db.ref('/');
+// ref.once('value', function(snapshot) {
+//   console.log(snapshot.val());
+// });
+// // var dbList = ref.child('grocerylist');
+// //console.log('dblist', ref);
+// // ref.set({list: [{item:'milk', 'date': 5}, {item:'eggs', 'date': 5}, {item:'cheese', 'date': 5}]})
 
-ref.once('value', function(snapshot) {
-  console.log(snapshot.val());
-});
+// ref.once('value', function(snapshot) {
+//   console.log(snapshot.val());
+// });
 
 module.exports.app = app;
 
-module.exports.ref = ref;
+// module.exports.ref = ref;
 // console.log(ref === module.exports.ref)
