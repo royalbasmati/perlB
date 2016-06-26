@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "switch for deploy start": "node server/server.js", 
-    "start": "nodemon server/server.js"
+    "start": "node server/server.js"
   },
   "engines" : {
     "node" : "4.4.3"
